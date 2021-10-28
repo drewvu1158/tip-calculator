@@ -9,3 +9,11 @@
 # DOUBLE EXTRA CREDIT
 # Put your script in a Github repository, call it 'Tip Calculator'
 #hello 
+
+cost = int(input("how much your meal cost?: "))
+print ("Your meal is " + str(cost) + " dollars without tax.")
+tip = int(input("What is the tip rate?: "))
+print ("You are being tipping " + str(tip) + "%")
+tax_variable = (tip / 100)
+total = (cost + tip)
+print ("Your cost without tip is " + str(cost) + " dollars, but your cost with tip equal to " + str(total) + " dollars.")
