@@ -9,12 +9,14 @@
 # DOUBLE EXTRA CREDIT
 # Put your script in a Github repository, call it 'Tip Calculator'
 #hello 
+from decimal import Decimal
 
-cost = int(input("how much your meal cost?: "))
+cost = float(input("how much your meal cost?: "))
 print ("Your meal is " + str(cost) + " dollars without tax.")
-tip = int(input("What is the tip rate?: "))
+tip = float(input("What is the tip rate?: "))
 print ("You are being tipping " + str(tip) + "%")
 tip_variable = (tip / 100)
 tip_total = (cost * tip_variable)
-total = (cost + tip_total)
-print ("Your cost without tip is " + str(cost) + " dollars, but your cost with tip equal to " + str(total) + " dollars.")
+total = Decimal(cost + tip_total)
+new_total = round(total, 2)
+print ("Your cost without tip is " + str(cost) + " dollars, but your cost with tip equal to " + str(new_total) + " dollars.")
